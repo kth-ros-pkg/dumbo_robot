@@ -1,0 +1,19 @@
+<package>
+  <description brief="dumbo_sim_bringup">
+
+     dumbo_sim_bringup
+
+  </description>
+  <author>fevb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dumbo_sim_bringup</url>
+  <depend package="roscpp"/>
+  <depend package="cob_srvs"/>
+  <depend package="dumbo_arm_navigation"/>
+  <depend package="cob_trajectory_controller"/>
+  <depend package="dumbo_vel_integrater"/>
+
+</package>
+
+

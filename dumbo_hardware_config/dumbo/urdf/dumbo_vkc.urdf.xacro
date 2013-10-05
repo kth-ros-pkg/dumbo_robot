@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       name="dumbo" >
+
+  <!-- This version incorporates Schunk PG70 parallel gripper -->
+
+  <!-- common stuff -->
+  <include filename="$(find dumbo_description)/urdf/common.xacro" />
+  <include filename="$(find dumbo_description)/urdf/materials.urdf.xacro" />
+
+  <include filename="$(find dumbo_description)/urdf/platform/platform_common.xacro" />
+  <include filename="$(find dumbo_description)/urdf/torso/torso_common.xacro" />
+  <include filename="$(find dumbo_description)/urdf/lwa/lwa_common.xacro" />
+  <include filename="$(find dumbo_description)/urdf/gripper/gripper_common.urdf.xacro" />
+
+  <!-- The following included files set up definitions of parts of the robot body -->
+  <include filename="$(find dumbo_description)/urdf/platform/platform.urdf.xacro" />
+  <include filename="$(find dumbo_description)/urdf/torso/torso.urdf.xacro" />
+  <include filename="$(find dumbo_description)/urdf/lwa/lwa.urdf.xacro" />
+  <include filename="$(find dumbo_description)/urdf/gripper/gripper.urdf.xacro" />
+
+  <property name="PI" value="3.1415926535897931" />
+  
+  <!-- The VKC part -->
+  <!-- <include filename="$(find dumbo_description)/urdf/camera/simple_camera_common.urdf.xacro" /> -->
+  <include filename="$(find dumbo_description)/urdf/vkc/dumbo_vkc.urdf.xacro"/>
+
+  <!-- Platform -->
+  <xacro:dumbo_platform name="base" />
+
+  <!-- Torso --> 
+  <xacro:dumbo_torso name="torso" parent="base_link">
+    <origin xyz = "0.0 0.06 ${platform_length_z + torso_length/2}" rpy="0.0 0.0 0.0" />
+  </xacro:dumbo_torso>
+
+  <!-- Schunk LWA -->
+  <xacro:dumbo_lwa name="right_arm" parent="arm_base_link" reflect="1" />
+  <xacro:dumbo_lwa name="left_arm" parent="arm_base_link" reflect="-1" />
+
+  <!-- Schunk PG70 parallel gripper -->
+  <xacro:dumbo_pg70_gripper name="left_arm" parent="left_arm_7_link"/>
+  <xacro:dumbo_pg70_gripper name="right_arm" parent="right_arm_7_link"/>
+
+  <!-- VKC -->
+  <xacro:dumbo_vkc name="dumbo_vkc" parent="right_arm_tool_link" child="" >
+    <!-- This name "dumbo_camera" should be the same with the xacro file "simple_camera.urdf.xacro"  -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:dumbo_vkc>
+
+</robot>

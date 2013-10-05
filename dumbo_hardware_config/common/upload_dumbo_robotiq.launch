@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- send dumbo urdf to param server -->
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find dumbo_hardware_config)/dumbo/urdf/dumbo_robotiq.urdf.xacro'" />
+
+</launch>

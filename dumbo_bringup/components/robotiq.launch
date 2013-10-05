@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="robotiqSModel" pkg="robotiq_s_model_control" type="SModelTcpNode.py" cwd="node" respawn="false" output="screen" args="192.168.1.11">
+  </node>
+
+  <node name="robotiq_dummy_joint_state_publisher" pkg="robotiq_hand_joint_state_publisher" type="robotiq_dummy_joint_state_publisher" cwd="node" respawn="false" output="screen" />
+</launch>

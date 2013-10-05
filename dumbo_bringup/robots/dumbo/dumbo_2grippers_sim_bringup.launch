@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- upload robot description -->
+  <include file="$(find dumbo_hardware_config)/common/upload_dumbo_2grippers.launch" />
+
+  <!-- start robot_state_publisher -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" />    
+
+  <!-- Arm navigation -->
+  <!-- <include file="$(find dumbo_arm_navigation)/launch/dumbo_arm_navigation.launch"/> -->
+  
+</launch>

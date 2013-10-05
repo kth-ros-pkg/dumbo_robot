@@ -1,0 +1,9 @@
+can_baudrate: 500
+arm_select: left
+frequency: 5
+
+#gripper params
+module_id: [8]
+joint_names: [left_arm_top_finger_joint, left_arm_bottom_finger_joint]
+max_acceleration: [0.2]
+serial_number: 20278

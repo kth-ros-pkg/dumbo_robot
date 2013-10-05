@@ -1,0 +1,25 @@
+<package>
+  <description brief="dumbo_bringup">
+
+     dumbo_bringup
+
+  </description>
+  <author>Francisco Vina</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dumbo_bringup</url>
+  <depend package="robot_state_publisher"/>
+  <depend package="dumbo_powercube_chain"/>
+  <depend package="dumbo_hardware_config"/>
+  <depend package="dumbo_dashboard"/>
+  <depend package="cob_trajectory_controller"/>
+  <depend package="dumbo_FT_sensor"/>
+  <depend package="openni_launch"/>
+  <depend package="dumbo_arm_navigation"/>
+  <depend package="phidgets_imu"/>
+  <depend package="robotiq_s_model_control"/>
+  <depend package="robotiq_hand_joint_state_publisher"/>
+  <depend package="biotac_sensors"/>
+</package>
+
+

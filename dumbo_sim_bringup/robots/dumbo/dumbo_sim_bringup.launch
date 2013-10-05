@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- upload robot description -->
+  <include file="$(find dumbo_hardware_config)/common/upload_dumbo.launch" />
+
+  <!-- start robot_state_publisher -->
+   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" value="100"/>
+  </node>      
+
+  <!-- Arm navigation -->
+  <include file="$(find dumbo_arm_navigation)/dumbo/launch/dumbo_arm_navigation.launch"/>
+
+  <!-- Velocity integrator -->
+  <include file="$(find dumbo_sim_bringup)/components/vel_integrator.launch"/>
+
+  <!-- PowerCubeChain simulator -->
+  <node pkg="dumbo_sim_bringup" type="dumbo_powercube_chain_sim" name="dumbo_powercube_chain_sim" />
+
+
+  <!-- Joint trajectory controllers -->
+  <node ns="left_arm_controller" name="joint_trajectory_controller" pkg="cob_trajectory_controller" type="cob_trajectory_controller" cwd="node" respawn="false" output="screen" >
+    <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/left_lwa.yaml" ns="/left_arm_controller"/>
+  </node>
+
+  <node ns="right_arm_controller" name="joint_trajectory_controller" pkg="cob_trajectory_controller" type="cob_trajectory_controller" cwd="node" respawn="false" output="screen" >  
+    <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/right_lwa.yaml" ns="/right_arm_controller"/>
+  </node>
+
+  <param name="/left_arm_controller/frequency" value="100" />
+  <param name="/right_arm_controller/frequency" value="100" />
+
+  
+</launch>

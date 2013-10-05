@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- upload robot description -->
+  <include file="$(find dumbo_hardware_config)/common/upload_dumbo_2grippers.launch" />
+
+  <!-- start robot_state_publisher -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" >    
+   <param name="publish_frequency" type="double" value="100" />    
+  </node>
+
+  <!-- upper robot -->
+  <include file="$(find dumbo_bringup)/components/right_lwa.launch" />
+  <include file="$(find dumbo_bringup)/components/left_lwa.launch" />
+
+  <!-- Force Torque Sensors -->
+  <include file="$(find dumbo_bringup)/components/left_arm_FT_sensor.launch" />
+  <include file="$(find dumbo_bringup)/components/right_arm_FT_sensor.launch" />
+
+  <!-- Accelerometer -->
+  <include file="$(find dumbo_bringup)/components/imu.launch"/>
+
+  <!-- Visualization -->
+  <!-- <include file="$(find dumbo_bringup)/robots/dumbo/dumbo_visualization.launch"/> -->
+
+  <!-- Dashboard -->
+  <node pkg="dumbo_dashboard" type="dumbo_dashboard" name="dumbo_dashboard"/>
+
+  <!-- Kinect -->
+  <!-- <include file="$(find dumbo_bringup)/components/kinect.launch"/> -->
+
+  <!-- Arm navigation -->
+  <!-- <include file="$(find dumbo_arm_navigation)/dumbo/launch/dumbo_arm_navigation.launch"/> -->
+  
+</launch>

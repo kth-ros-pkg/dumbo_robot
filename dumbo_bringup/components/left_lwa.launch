@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="left_arm_controller" pkg="dumbo_powercube_chain" type="dumbo_powercube_chain" cwd="node" respawn="false" output="screen" >
+    <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/left_lwa.yaml"/>
+  </node>
+
+  <!-- <node name="left_arm_controller" pkg="dumbo_powercube_chain" type="dumbo_powercube_chain" launch-prefix="xterm -e gdb -args"> -->
+  <!--   <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/left_lwa.yaml"/> -->
+  <!-- </node> -->
+
+  <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/pg70.yaml" ns="/PG70_controller" />
+
+  <node ns="left_arm_controller" name="joint_trajectory_controller" pkg="cob_trajectory_controller" type="cob_trajectory_controller" cwd="node" respawn="false" output="screen" >
+    <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/left_lwa.yaml"/>
+    <param name="frequency" value="50"/>
+  </node>
+
+</launch>

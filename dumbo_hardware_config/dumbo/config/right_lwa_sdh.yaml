@@ -1,0 +1,20 @@
+# configuration for the right arm with SDH mounted on it
+
+can_baudrate: 500
+module_ids: [1,2,3,4,5,6,7]
+arm_name: right_arm
+arm_select: right
+joint_names: [right_arm_1_joint, right_arm_2_joint, right_arm_3_joint, right_arm_4_joint, right_arm_5_joint, right_arm_6_joint, right_arm_7_joint]
+max_accelerations: [0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6]
+frequency: 200
+min_publish_duration: 0.05
+OperationMode: position
+serial_number_module1: 41253
+horizon: 0.1
+
+# trajectory controller parameters
+ptp_vel: 0.4 # rad/sec
+ptp_acc: 0.2 # rad/sec^2
+max_error: 0.1 # rad
+
+gripper: sdh

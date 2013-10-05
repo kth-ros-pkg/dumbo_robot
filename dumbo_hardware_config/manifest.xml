@@ -1,0 +1,17 @@
+<package>
+  <description brief="dumbo_hardware_config">
+
+     dumbo_hardware_config
+
+  </description>
+  <author>fevb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/dumbo_hardware_config</url>
+  <depend package="rostest"/>
+  <depend package="dumbo_description"/>
+  <depend package="raw_description"/>
+
+</package>
+
+

@@ -1,0 +1,12 @@
+#calibrated with spoon tool
+
+loop_frequency: 650
+read_frequency: 650
+serial_number: FT9910
+arm_select: left
+bias: [-0.6151,   12.1286,   -3.0012,    0.1039,    0.3646,    0.1135]
+end_effector_mass: 1.678
+
+# coefficients 2nd order butterworth LPF (10 Hz cutoff frequency)
+b: [0.0055,    0.0111,    0.0055]
+a: [1.0000,   -1.7786,    0.8008]
