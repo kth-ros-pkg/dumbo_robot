@@ -1,0 +1,28 @@
+<package>
+ <name> dumbo_bringup </name>
+  <version>1.0.0</version>
+  <description>
+    Launch files for bringing up CVAP's Dumbo robot and its components (FT sensors, grippers, tactile sensors etc).
+  </description>
+  <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
+  <license>BSD</license>
+
+  <url>http://ros.org/wiki/dumbo_bringup</url>
+  <author>Francisco Vina</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <run_depend>robot_state_publisher</run_depend>  
+  <run_depend>dumbo_powercube_chain</run_depend>
+  <run_depend>dumbo_hardware_config</run_depend>
+  <run_depend>dumbo_dashboard</run_depend>
+  <run_depend>cob_trajectory_controller</run_depend>
+  <run_depend>dumbo_FT_sensor</run_depend>
+  <run_depend>openni_launch</run_depend>
+  <run_depend>dumbo_arm_navigation</run_depend>
+  <run_depend>phidgets_imu</run_depend>
+  <run_depend>robotiq_s_model_control</run_depend>
+  <run_depend>robotiq_hand_joint_state_publisher</run_depend>
+  <run_depend>biotac_sensors</run_depend>
+</package>

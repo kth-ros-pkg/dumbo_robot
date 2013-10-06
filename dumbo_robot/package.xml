@@ -1,0 +1,24 @@
+<package>
+  <name> dumbo_robot </name>
+  <version>1.0.0</version>
+  <description>
+    Bringup files and hardware configuration files for CVAP's Dumbo robot.
+  </description>
+  <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
+  <license>BSD</license>
+
+  <url>http://ros.org/wiki/dumbo_robot</url>
+  <author>Francisco Vina</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <run_depend>dumbo_common</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>ros_comm</run_depend>
+  <run_depend>robot_model</run_depend>
+  <run_depend>dumbo_hardware_interface</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

@@ -1,0 +1,17 @@
+<package>
+ <name> dumbo_hardware_config </name>
+  <version>1.0.0</version>
+  <description>
+    Hardware configuration files and URDF files for CVAP's Dumbo robot.
+  </description>
+  <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
+  <license>BSD</license>
+
+  <url>http://ros.org/wiki/dumbo_hardware_config</url>
+  <author>Francisco Vina</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>dumbo_description</run_depend>
+
+</package>
