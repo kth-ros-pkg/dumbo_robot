@@ -11,12 +11,9 @@
   <author>Francisco Vina</author>
   <buildtool_depend>catkin</buildtool_depend>
   
-  <run_depend>dumbo_common</run_depend>
-  <run_depend>std_msgs</run_depend>
-  <run_depend>message_runtime</run_depend>
-  <run_depend>ros_comm</run_depend>
-  <run_depend>robot_model</run_depend>
-  <run_depend>dumbo_hardware_interface</run_depend>
+  <run_depend>dumbo_bringup</run_depend>
+  <run_depend>dumbo_hardware_config</run_depend>
+  <run_depend>dumbo_sim_bringup</run_depend>
 
   <export>
     <metapackage/>
