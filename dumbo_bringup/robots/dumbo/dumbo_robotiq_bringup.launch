@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-  <!-- Brings up Dumbo with FT sensors, left and right arms, PG70 parallel gripper on left arm, Robotiq hand on the right arm with Biotac sensors, accelerometer  -->
+  <!-- Brings up Dumbo with F/T sensors, left and right arms, PG70 parallel gripper on left arm, Robotiq hand on the right arm with Biotac sensors, accelerometer  -->
 
   <!-- upload robot description -->
   <include file="$(find dumbo_hardware_config)/common/upload_dumbo_robotiq.launch" />
@@ -22,8 +22,8 @@
   <include file="$(find dumbo_bringup)/components/biotac.launch" />
 
   <!-- Force Torque Sensors -->
-  <include file="$(find dumbo_bringup)/components/left_arm_FT_sensor.launch" />  
-  <include file="$(find dumbo_bringup)/components/right_arm_FT_sensor_robotiq.launch" />
+  <include file="$(find dumbo_bringup)/components/left_arm_ft_sensor.launch" />  
+  <include file="$(find dumbo_bringup)/components/right_arm_ft_sensor_robotiq.launch" />
 
 
   <!-- Accelerometer -->

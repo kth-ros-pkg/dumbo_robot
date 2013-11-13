@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="right_arm_ft_sensor" pkg="dumbo_force_torque_sensor" type="dumbo_force_torque" cwd="node" respawn="false" output="screen">
+    <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/right_arm_ft_sensor.yaml" />
+  </node>
+
+</launch>

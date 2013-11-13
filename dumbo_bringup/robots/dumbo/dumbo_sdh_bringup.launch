@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-  <!-- Brings up Dumbo with FT sensors, left and right arms, PG70 parallel gripper on left arm, SDH on right arm, accelerometer  -->
+  <!-- Brings up Dumbo with F/T sensors, left and right arms, PG70 parallel gripper on left arm, SDH on right arm, accelerometer  -->
 
   <!-- upload robot description -->
   <include file="$(find dumbo_hardware_config)/common/upload_dumbo_sdh.launch" />
@@ -16,8 +16,8 @@
   <include file="$(find dumbo_bringup)/components/right_lwa_sdh.launch" />
 
   <!-- Force Torque Sensors -->
-  <include file="$(find dumbo_bringup)/components/left_arm_FT_sensor.launch" />  
-  <include file="$(find dumbo_bringup)/components/right_arm_FT_sensor.launch" />
+  <include file="$(find dumbo_bringup)/components/left_arm_ft_sensor.launch" />  
+  <include file="$(find dumbo_bringup)/components/right_arm_ft_sensor.launch" />
 
 
   <!-- Accelerometer -->
