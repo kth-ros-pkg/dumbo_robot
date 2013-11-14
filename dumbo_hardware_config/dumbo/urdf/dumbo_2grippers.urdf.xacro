@@ -42,7 +42,7 @@
   <xacro:dumbo_lwa name="left_arm" parent="arm_base_link" reflect="-1" />
 
   <!-- Schunk PG70 parallel gripper -->
-  <xacro:dumbo_pg70_gripper name="left_arm" parent="left_arm_7_link"/>
-  <xacro:dumbo_pg70_gripper name="right_arm" parent="right_arm_7_link"/>
+  <xacro:dumbo_pg70_gripper name="left_arm" parent="left_arm_gripper_link"/>
+  <xacro:dumbo_pg70_gripper name="right_arm" parent="right_arm_gripper_link"/>
 
 </robot>
