@@ -2,7 +2,7 @@
 <launch>
 
   <node name="right_arm_ft_sensor" pkg="dumbo_force_torque_sensor" type="dumbo_force_torque" cwd="node" respawn="false" output="screen">
-    <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/right_arm_ft_sensor.yaml" />
+    <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/right_arm_ft_sensor_robotiq.yaml" />
   </node>
 
 </launch>
