@@ -29,13 +29,8 @@
   <!-- Accelerometer -->
   <include file="$(find dumbo_bringup)/components/imu.launch"/>
 
-  <!-- Visualization -->
-  <!-- <include file="$(find dumbo_bringup)/robots/dumbo/dumbo_visualization.launch"/> -->
 
   <!-- Dashboard -->
   <node pkg="dumbo_dashboard" type="dumbo_dashboard" name="dumbo_dashboard"/>
-
-    <!-- Arm navigation -->
-  <include file="$(find dumbo_arm_navigation)/dumbo_robotiq/launch/dumbo_arm_navigation.launch"/>
 
 </launch>
