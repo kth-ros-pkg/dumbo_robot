@@ -8,7 +8,7 @@
 
   <!-- start robot_state_publisher -->    
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" >
-    <param name="publish_frequency" type="double" value="100" />    
+    <param name="publish_frequency" type="double" value="130" />    
   </node>
 
   <!-- upper robot -->
@@ -23,9 +23,6 @@
   <!-- Accelerometer -->
   <include file="$(find dumbo_bringup)/components/imu.launch"/>
 
-  <!-- Visualization -->
-  <!-- <include file="$(find dumbo_bringup)/robots/dumbo/dumbo_visualization.launch"/> -->
-
   <!-- Dashboard -->
   <node pkg="dumbo_dashboard" type="dumbo_dashboard" name="dumbo_dashboard"/>
 
@@ -35,7 +32,5 @@
   <!-- Arm navigation -->
   <include file="$(find dumbo_arm_navigation)/dumbo_sdh/launch/dumbo_arm_navigation.launch"/>
 
-  <!-- Startup CAN cards -->
-  <!-- <node name="startup_CAN_cards" pkg="dumbo_scripts" type="start_CAN_cards.sh" /> -->
-  
+   
 </launch>
