@@ -13,7 +13,7 @@
 
   <node ns="left_arm_controller" name="joint_trajectory_controller" pkg="cob_trajectory_controller" type="cob_trajectory_controller" cwd="node" respawn="false" output="screen" >
     <rosparam command="load" file="$(find dumbo_hardware_config)/dumbo/config/left_lwa.yaml"/>
-    <param name="frequency" value="50"/>
+    <param name="frequency" value="150"/>
   </node>
 
 </launch>
