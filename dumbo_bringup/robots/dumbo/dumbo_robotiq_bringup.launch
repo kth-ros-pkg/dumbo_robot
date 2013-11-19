@@ -33,4 +33,7 @@
   <!-- Dashboard -->
   <node pkg="dumbo_dashboard" type="dumbo_dashboard" name="dumbo_dashboard"/>
 
+  <!-- Moveit -->
+  <include file="$(find dumbo_moveit_config)/launch/move_group.launch"/>  
+
 </launch>
