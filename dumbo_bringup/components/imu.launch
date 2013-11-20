@@ -20,12 +20,12 @@
 
   #### IMU Orientation Filter ###############################################
 
-  <!-- <node pkg="nodelet" type="nodelet" name="ImuFilterNodelet"  -->
-  <!--   args="load imu_filter_madgwick/ImuFilterNodelet imu_manager"  -->
-  <!--   output="screen"> -->
+  <node pkg="nodelet" type="nodelet" name="ImuFilterNodelet"
+    args="load imu_filter_madgwick/ImuFilterNodelet imu_manager"
+    output="screen">
 
-  <!--   <param name="use_mag" value="true"/> -->
-  <!--   <param name="fixed_frame" value="accelerometer" /> -->
-  <!-- </node> -->
+    <param name="use_mag" value="true"/>
+    <param name="fixed_frame" value="accelerometer" />
+  </node>
 
 </launch>
