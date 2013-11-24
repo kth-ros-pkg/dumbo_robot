@@ -23,7 +23,7 @@
 
   <!-- Force Torque Sensors -->
   <include file="$(find dumbo_bringup)/components/left_arm_ft_sensor.launch" />  
-  <include file="$(find dumbo_bringup)/components/right_arm_ft_sensor_robotiq.launch" />
+  <include file="$(find dumbo_bringup)/components/right_arm_ft_sensor.launch" />
 
 
   <!-- Accelerometer -->
