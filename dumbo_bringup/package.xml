@@ -20,7 +20,6 @@
   <run_depend>cob_trajectory_controller</run_depend>
   <run_depend>dumbo_force_torque_sensor</run_depend>
   <!-- <run_depend>openni_launch</run_depend> -->
-  <run_depend>dumbo_arm_navigation</run_depend>
   <run_depend>phidgets_drivers</run_depend>
   <run_depend>phidgets_imu</run_depend>
   <run_depend>robotiq_s_model_control</run_depend>
