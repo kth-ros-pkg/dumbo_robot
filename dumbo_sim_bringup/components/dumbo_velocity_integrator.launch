@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+   <node name="dumbo_velocity_integrator_node" pkg="dumbo_sim_bringup" type="dumbo_velocity_integrator" cwd="node" respawn="false" output="screen" >
+    <rosparam command="load" file="$(find dumbo_sim_bringup)/config/dumbo_velocity_integrator.yaml"/>
+  </node>
+
+</launch>
