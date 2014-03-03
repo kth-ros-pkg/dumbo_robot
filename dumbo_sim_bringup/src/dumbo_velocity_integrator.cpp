@@ -131,8 +131,8 @@ void dumbo_velocity_integrator::getROSParameters()
 		controller_state_r_msg_.joint_names.resize(m_DOF);
 		controller_state_l_msg_.actual.positions.resize(m_DOF);
 		controller_state_r_msg_.actual.positions.resize(m_DOF);
-		joint_states_msg_.name.resize(2*m_DOF+2 + 2);
-		joint_states_msg_.position.resize(2*m_DOF+2 +2);
+		joint_states_msg_.name.resize(2*m_DOF+2);
+		joint_states_msg_.position.resize(2*m_DOF+2);
 
 		// Write the joint names
 		for(unsigned int ii = 0; ii < m_DOF; ii++){
@@ -245,11 +245,11 @@ void dumbo_velocity_integrator::publish_joints(){
 				joint_states_msg_.name[2*m_DOF+1] = "left_arm_top_finger_joint";
 				joint_states_msg_.position[2*m_DOF+1] = 0.0;
 
-				joint_states_msg_.name[2*m_DOF+2] = "right_arm_bottom_finger_joint";
-				joint_states_msg_.position[2*m_DOF+2] = 0.0;
+				// joint_states_msg_.name[2*m_DOF+2] = "right_arm_bottom_finger_joint";
+				// joint_states_msg_.position[2*m_DOF+2] = 0.0;
 
-				joint_states_msg_.name[2*m_DOF+3] = "right_arm_top_finger_joint";
-				joint_states_msg_.position[2*m_DOF+3] = 0.0;
+				// joint_states_msg_.name[2*m_DOF+3] = "right_arm_top_finger_joint";
+				// joint_states_msg_.position[2*m_DOF+3] = 0.0;
 
 
 				// Publish the dummy joint positions for both arms
