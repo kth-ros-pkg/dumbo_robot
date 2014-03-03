@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-   <node name="dumbo_velocity_integrater_node" pkg="dumbo_vel_integrater" type="dumbo_vel_integrator" cwd="node" respawn="false" output="screen" >
-    <rosparam command="load" file="$(find dumbo_sim_bringup)/config/vel_integrator.yaml"/>
-  </node>
-
-</launch>
