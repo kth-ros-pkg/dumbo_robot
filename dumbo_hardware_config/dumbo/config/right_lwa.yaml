@@ -11,8 +11,8 @@ serial_number_module1: 41253
 horizon: 0.1
 
 # trajectory controller parameters
-ptp_vel: 0.4 # rad/sec
-ptp_acc: 0.2 # rad/sec^2
-max_error: 0.1 # rad
+ptp_vel: 0.26 # rad/sec
+ptp_acc: 1.5 # rad/sec^2
+max_error: 0.15 # rad
 
 gripper: none
