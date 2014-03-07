@@ -131,6 +131,8 @@ void dumbo_velocity_integrator::getROSParameters()
 		controller_state_r_msg_.joint_names.resize(m_DOF);
 		controller_state_l_msg_.actual.positions.resize(m_DOF);
 		controller_state_r_msg_.actual.positions.resize(m_DOF);
+		controller_state_l_msg_.actual.velocities.resize(m_DOF);
+		controller_state_r_msg_.actual.velocities.resize(m_DOF);
 		joint_states_msg_.name.resize(2*m_DOF+2);
 		joint_states_msg_.position.resize(2*m_DOF+2);
 
@@ -227,6 +229,8 @@ void dumbo_velocity_integrator::publish_joints(){
 				for(unsigned int i=0; i<m_DOF; i++){
 					controller_state_l_msg_.actual.positions[i] = Joint_pos_l_[i];
 					controller_state_r_msg_.actual.positions[i] = Joint_pos_r_[i];
+					controller_state_l_msg_.actual.velocities[i] = Joint_v_buffer_l_[i];
+					controller_state_r_msg_.actual.velocities[i] = Joint_v_buffer_r_[i];
 					Joint_pos_r_last_[i] = Joint_pos_r_[i];
 					Joint_pos_l_last_[i] = Joint_pos_l_[i];
 					joint_states_msg_.position[i] = Joint_pos_[i];
