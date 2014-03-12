@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="dumbo_safety_monitor" pkg="dumbo_safety_monitor" type="dumbo_safety_monitor" cwd="node" respawn="false" output="screen" >
+    <param name="max_force" value="50.0" />
+    <param name="max_torque" value="5.0" />
+  </node>
+
+</launch>

@@ -36,4 +36,7 @@
   <!-- Moveit -->
   <include file="$(find dumbo_moveit_config)/launch/move_group.launch"/>  
 
+  <!-- Safety monitor -->
+  <include file="$(find dumbo_bringup)/components/safety_monitor.launch"/>
+
 </launch>
