@@ -8,21 +8,21 @@
   <!-- This version incorporates Schunk PG70 parallel gripper -->
 
   <!-- common stuff -->
-  <include filename="$(find dumbo_description)/urdf/common.xacro" />
-  <include filename="$(find dumbo_description)/urdf/materials.urdf.xacro" />
-  <include filename="$(find cob_description)/urdf/materials.urdf.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/common.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/materials.urdf.xacro" />
+  <xacro:include filename="$(find cob_description)/urdf/materials.urdf.xacro" />
 
-  <include filename="$(find dumbo_description)/urdf/platform/platform_common.xacro" />
-  <include filename="$(find dumbo_description)/urdf/torso/torso_common.xacro" />
-  <include filename="$(find dumbo_description)/urdf/lwa/lwa_common.xacro" />
-  <include filename="$(find dumbo_description)/urdf/gripper/gripper_common.urdf.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/platform/platform_common.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/torso/torso_common.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/lwa/lwa_common.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/gripper/gripper_common.urdf.xacro" />
 
   <!-- The following included files set up definitions of parts of the robot body -->
-  <include filename="$(find dumbo_description)/urdf/platform/platform.urdf.xacro" />
-  <include filename="$(find dumbo_description)/urdf/torso/torso.urdf.xacro" />
-  <include filename="$(find dumbo_description)/urdf/accelerometer/accelerometer.urdf.xacro" />
-  <include filename="$(find dumbo_description)/urdf/lwa/lwa.urdf.xacro" />
-  <include filename="$(find dumbo_description)/urdf/gripper/gripper.urdf.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/platform/platform.urdf.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/torso/torso.urdf.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/accelerometer/accelerometer.urdf.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/lwa/lwa.urdf.xacro" />
+  <xacro:include filename="$(find dumbo_description)/urdf/gripper/gripper.urdf.xacro" />
   
 
   <property name="PI" value="3.1415926535897931" />
