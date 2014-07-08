@@ -2,6 +2,6 @@
 <launch>
 
 <!-- visualization tool -->
-   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dumbo_arm_navigation)/common/config/planning_scene_warehouse_viewer.vcg" />
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dumbo_bringup)/config/dumbo_visualization.rviz" />
 
 </launch>
