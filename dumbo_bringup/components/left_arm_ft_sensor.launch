@@ -9,8 +9,9 @@
     <rosparam command="load" file="$(env HOME)/.ros/ft_calib/dumbo_left_arm_ft_calib_data.yaml" />
     <remap from="/left_arm_ft_sensor/gravity_compensation/ft_raw" to="/left_arm_ft_sensor/ft_raw" />
     <remap from="/left_arm_ft_sensor/gravity_compensation/imu" to="/imu/data" />
+    <remap from="/left_arm_ft_sensor/gravity_compensation/ft_compensated" to="/left_arm_ft_sensor/ft_gravity_compensated" />
+    <remap from="/left_arm_ft_sensor/gravity_compensation/ft_zeroed" to="/left_arm_ft_sensor/ft_zeroed" />
     <param name="loop_rate" value="650.0" />
-    <param name="ns" value="/left_arm_ft_sensor"/>
     <param name="gripper_com_child_frame_id" value="/parallel_gripper_com"/>
   </node>
 
