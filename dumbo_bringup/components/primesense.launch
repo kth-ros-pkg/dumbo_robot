@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="primesense_tf_publisher" pkg="tf" type="static_transform_publisher" args="-0.00724525 -0.0142546 0.255127 -0.12652 0.1002 0.69456 0.7011 arm_base_link camera_link 20">
+  </node>
+
+  <include file="$(find openni2_launch)/launch/openni2.launch" />
+
+</launch>
