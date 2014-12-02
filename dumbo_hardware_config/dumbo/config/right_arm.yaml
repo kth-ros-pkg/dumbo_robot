@@ -1,13 +1,19 @@
 can_baudrate: 500
+
+# CAN module IDs
 module_ids: [1,2,3,4,5,6,7]
-arm_name: right_arm
-arm_select: right
+
+arm_name: right
+
 joint_names: [right_arm_1_joint, right_arm_2_joint, right_arm_3_joint, right_arm_4_joint, right_arm_5_joint, right_arm_6_joint, right_arm_7_joint]
-max_accelerations: [2.6529, 2.6529, 2.6529, 2.6529, 2.7925, 2.7925, 2.7925]
-frequency: 150
-min_publish_duration: 0.1
-OperationMode: position
+max_accelerations: [1.658, 1.658, 1.658, 1.658, 1.745, 1.745, 1.745]
+
+min_publish_duration: 0.01
+
+# serial number for finding the right CAN channel the arm is connected to
 serial_number_module1: 41253
+
+# horizon for timed position commands 
 horizon: 0.1
 
 # trajectory controller parameters
@@ -15,4 +21,5 @@ ptp_vel: 0.44 # rad/sec
 ptp_acc: 2.0 # rad/sec^2
 max_error: 0.15 # rad
 
+#indicate if there is a gripper attached and which kind
 gripper: none

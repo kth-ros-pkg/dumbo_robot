@@ -1,4 +1,4 @@
 loop_frequency: 650
 read_frequency: 650
 serial_number: FT9910
-arm_select: left
+arm_name: left
