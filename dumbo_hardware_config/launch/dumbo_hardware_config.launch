@@ -1,0 +1,11 @@
+<launch>
+
+
+  <!-- load hardware config parameters -->
+  <rosparam command="load" file="$(find dumbo_hardware_config)/config/left_arm.yaml" ns="/left_arm"/>
+  <rosparam command="load" file="$(find dumbo_hardware_config)/config/right_arm.yaml" ns="/right_arm"/>
+  <rosparam command="load" file="$(find dumbo_hardware_config)/config/pg70.yaml" ns="/PG70_gripper"/>
+  <rosparam command="load" file="$(find dumbo_hardware_config)/config/left_arm_ft_sensor.yaml" ns="/left_arm_ft_sensor"/>
+  <rosparam command="load" file="$(find dumbo_hardware_config)/config/right_arm_ft_sensor.yaml" ns="/right_arm_ft_sensor"/>
+
+</launch>

@@ -2,7 +2,7 @@
  <name> dumbo_hardware_config </name>
   <version>1.0.0</version>
   <description>
-    Hardware configuration files and URDF files for CVAP's Dumbo robot.
+    Hardware configuration files for CVAP's Dumbo robot. Includes Schunk arms, SDH, parallel gripper, and force-torque sensors. 
   </description>
   <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
   <license>BSD</license>
