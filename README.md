@@ -15,4 +15,4 @@ Contains the main launch files necesary to start Dumbo's core ROS components.
 dumbo_hardware_config
 ---------------------------------------------
 
-Contains URDFs of Dumbo and yaml parameter files for configuring several hardware components.
+Contains yaml parameter files for configuring several hardware components.

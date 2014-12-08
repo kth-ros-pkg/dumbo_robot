@@ -1,0 +1,18 @@
+<package>
+  <name>dumbo_controller_config</name>
+  <version>0.0.1</version>
+  <description>Configuration files for Dumbo's controllers.</description>
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/dumbo_controller_config</url>
+
+  <author email="fevb@kth.se">Francisco Vina</author>
+  <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>dumbo_hardware_interface</run_depend>
+  <run_depend>dumbo_hw_control_loop</run_depend>
+  <run_depend>ros_controllers</run_depend>
+
+</package>

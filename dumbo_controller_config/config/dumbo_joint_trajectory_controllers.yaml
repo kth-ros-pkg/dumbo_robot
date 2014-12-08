@@ -1,0 +1,52 @@
+joint_trajectory_controller_gains: &joint_trajectory_controller_gains
+  p: 10.0
+  i: 0.0
+  d: 0.0
+  i_clamp: 0.0
+
+left_arm_joint_trajectory_controller:
+  type: velocity_controllers/JointTrajectoryController
+  joints:
+    - left_arm_1_joint
+    - left_arm_2_joint
+    - left_arm_3_joint
+    - left_arm_4_joint
+    - left_arm_5_joint
+    - left_arm_6_joint
+    - left_arm_7_joint
+
+  gains:
+    left_arm_1_joint: *joint_trajectory_controller_gains
+    left_arm_2_joint: *joint_trajectory_controller_gains
+    left_arm_3_joint: *joint_trajectory_controller_gains
+    left_arm_4_joint: *joint_trajectory_controller_gains
+    left_arm_5_joint: *joint_trajectory_controller_gains
+    left_arm_6_joint: *joint_trajectory_controller_gains
+    left_arm_7_joint: *joint_trajectory_controller_gains
+
+  state_publish_rate: 100
+  stop_trajectory_duration: 1.0
+
+
+right_arm_joint_trajectory_controller:
+  type: velocity_controllers/JointTrajectoryController
+  joints:
+    - right_arm_1_joint
+    - right_arm_2_joint
+    - right_arm_3_joint
+    - right_arm_4_joint
+    - right_arm_5_joint
+    - right_arm_6_joint
+    - right_arm_7_joint
+
+  gains:
+    right_arm_1_joint: *joint_trajectory_controller_gains
+    right_arm_2_joint: *joint_trajectory_controller_gains
+    right_arm_3_joint: *joint_trajectory_controller_gains
+    right_arm_4_joint: *joint_trajectory_controller_gains
+    right_arm_5_joint: *joint_trajectory_controller_gains
+    right_arm_6_joint: *joint_trajectory_controller_gains
+    right_arm_7_joint: *joint_trajectory_controller_gains
+
+  state_publish_rate: 100
+  stop_trajectory_duration: 1.0
