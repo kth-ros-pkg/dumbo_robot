@@ -1,5 +1,5 @@
 joint_trajectory_controller_gains: &joint_trajectory_controller_gains
-  p: 10.0
+  p: 5.0
   i: 0.0
   d: 0.0
   i_clamp: 0.0
