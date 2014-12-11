@@ -1,0 +1,14 @@
+<package>
+  <name>dumbo_calibration_config</name>
+  <version>0.0.1</version>
+  <description>Hardware calibration files for Dumbo (cameras, force-torque sensors).</description>
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/dumbo_calibration</url>
+
+  <author email="fevb@kth.se">Francisco Vina</author>
+  <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>
