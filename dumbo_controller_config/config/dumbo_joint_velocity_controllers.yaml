@@ -19,3 +19,9 @@ right_arm_joint_velocity_controller:
     - right_arm_5_joint
     - right_arm_6_joint
     - right_arm_7_joint
+
+gripper_joint_velocity_controller:
+  type: velocity_controllers/JointGroupVelocityController
+  joints:
+    - left_arm_top_finger_joint
+    - left_arm_bottom_finger_joint
