@@ -4,7 +4,7 @@
   <!-- Brings up Dumbo with F/T sensors, left and right arms, PG70 parallel gripper on left arm, Robotiq hand on the right arm with Biotac sensors, accelerometer  -->
 
   <!-- upload robot description -->
-  <include file="$(find dumbo_hardware_config)/common/upload_dumbo_robotiq.launch" />
+  <include file="$(find dumbo_description)/robots/upload_dumbo_robotiq.launch" />
 
   <!-- start robot_state_publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" >
@@ -22,6 +22,9 @@
 
   <!-- load Dumbo default controllers -->
   <include file="$(find dumbo_controller_config)/launch/dumbo_default_controllers.launch" />
+
+  <!-- force-torque sensor gravity compensation -->
+  <include file="$(find dumbo_bringup)/components/gravity_compensation.launch" />
 
   <!-- Robotiq hand -->
   <include file="$(find dumbo_bringup)/components/robotiq.launch" />

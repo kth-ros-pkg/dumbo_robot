@@ -3,7 +3,7 @@
   <!-- Brings up Dumbo with F/T sensors, left and right arms, PG70 parallel gripper on left arm, accelerometer  -->
 
   <!-- upload robot description -->
-  <include file="$(find dumbo_hardware_config)/common/upload_dumbo.launch" />
+  <include file="$(find dumbo_description)/robots/upload_dumbo.launch" />
 
   <!-- start robot_state_publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" >
@@ -21,6 +21,9 @@
 
   <!-- load Dumbo default controllers -->
   <include file="$(find dumbo_controller_config)/launch/dumbo_default_controllers.launch" />
+
+  <!-- force-torque sensor gravity compensation -->
+  <include file="$(find dumbo_bringup)/components/gravity_compensation.launch" />
 
   <!-- Accelerometer -->
   <include file="$(find dumbo_bringup)/components/imu.launch"/>
