@@ -5,7 +5,7 @@
     <param name="loop_rate" value="500.0" />
     <param name="gripper_com_child_frame_id" value="left_arm_gripper_com"/>
     <remap from="/left_arm_ft_sensor/gravity_compensation/ft_raw" to="/left_arm_ft_sensor" />
-    <remap from="/left_arm_ft_sensor/gravity_compensation/imu" to="/imu/data" />
+    <remap from="/left_arm_ft_sensor/gravity_compensation/imu" to="/imu/data_raw" />
   </node>
 
   <node name="gravity_compensation" pkg="gravity_compensation" type="gravity_compensation_node" ns="right_arm_ft_sensor" cwd="node" respawn="false" output="screen" >
@@ -13,7 +13,7 @@
     <param name="loop_rate" value="500.0" />
     <param name="gripper_com_child_frame_id" value="right_arm_gripper_com"/>
     <remap from="/right_arm_ft_sensor/gravity_compensation/ft_raw" to="/right_arm_ft_sensor" />
-    <remap from="/right_arm_ft_sensor/gravity_compensation/imu" to="/imu/data" />
+    <remap from="/right_arm_ft_sensor/gravity_compensation/imu" to="/imu/data_raw" />
   </node>
 
 </launch>
