@@ -18,8 +18,9 @@ include_directories(
 )
 
 install(FILES
-   ${CMAKE_CURRENT_SOURCE_DIR}/components/start_pci_CAN_cards.sh
-   ${CMAKE_CURRENT_SOURCE_DIR}/components/stop_pci_CAN_cards.sh
-   ${CMAKE_CURRENT_SOURCE_DIR}/components/restart_pci_CAN_cards.sh
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+  ${CMAKE_CURRENT_SOURCE_DIR}/launch/dumbo_robotiq_bringup.launch
+  ${CMAKE_CURRENT_SOURCE_DIR}/components/start_pci_CAN_cards.sh
+  ${CMAKE_CURRENT_SOURCE_DIR}/components/stop_pci_CAN_cards.sh
+  ${CMAKE_CURRENT_SOURCE_DIR}/components/restart_pci_CAN_cards.sh
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )

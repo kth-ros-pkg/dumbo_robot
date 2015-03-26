@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Brings up Dumbo with F/T sensors, left and right arms, PG70 parallel gripper on left arm, accelerometer  -->
+
+  <!-- upload robot description -->
+  <include file="$(find dumbo_description)/robots/upload_dumbo.launch" />
+
+  <!-- start robot_state_publisher -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" >
+    <param name="publish_frequency" type="double" value="150" />    
+  </node>
+
+  <!-- load hardware config parameters -->
+  <include file="$(find dumbo_hardware_config)/launch/dumbo_hardware_config.launch" />
+
+  <!-- Dumbo realtime HW control loop w sudo rights -->
+  <!-- Controls Schunk arms, parallel gripper and force-torque sensors -->
+  <!-- The user must be able to do passwordless sudo!!!  -->
+  <!-- see the instructions in this package's github page or in CVAP's wiki page -->
+  <node name="dumbo_hw_control_loop" pkg="dumbo_hw_control_loop" type="dumbo_hw_control_loop" output="screen"/>
+
+  <!-- load Dumbo default controllers -->
+  <include file="$(find dumbo_controller_config)/launch/dumbo_default_controllers.launch" />
+
+  <!-- force-torque sensor gravity compensation -->
+  <include file="$(find dumbo_bringup)/components/gravity_compensation.launch" />
+
+  <!-- Accelerometer -->
+  <include file="$(find dumbo_bringup)/components/imu.launch"/>
+
+  <!-- Dashboard -->
+  <node pkg="dumbo_dashboard" type="dumbo_dashboard" name="dumbo_dashboard"/>
+
+  <!-- Moveit -->
+  <include file="$(find dumbo_moveit_config)/launch/move_group.launch"/>  
+
+  <!-- Safety monitor -->
+  <include file="$(find dumbo_bringup)/components/safety_monitor.launch"/>
+
+</launch>

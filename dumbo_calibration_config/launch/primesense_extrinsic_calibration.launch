@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="primesense_tf_publisher" pkg="tf" type="static_transform_publisher" args="-0.0133344 -0.0174929 0.255223 1.54889883448 0.322433568802 -0.0456275686637 arm_base_link camera_link 20">
+  </node>
+
+</launch>

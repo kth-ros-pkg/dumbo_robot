@@ -1,6 +1,5 @@
 can_baudrate: 500
-arm_select: left
-frequency: 5
+arm_name: left
 
 #gripper params
 module_id: [8]
