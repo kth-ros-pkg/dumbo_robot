@@ -30,7 +30,7 @@
   <include file="$(find dumbo_bringup)/components/robotiq.launch" />
 
   <!-- Biotac sensors -->
-  <include file="$(find dumbo_bringup)/components/biotac.launch" />
+  <!-- <include file="$(find dumbo_bringup)/components/biotac.launch" /> -->
 
   <!-- Accelerometer -->
   <include file="$(find dumbo_bringup)/components/imu.launch"/>
@@ -43,5 +43,8 @@
 
   <!-- Safety monitor -->
   <include file="$(find dumbo_bringup)/components/safety_monitor.launch"/>
+
+  <!-- Camera pose publisher -->
+  <include file="$(find dumbo_calibration_config)/launch/primesense_extrinsic_calibration.launch"/>
 
 </launch>
