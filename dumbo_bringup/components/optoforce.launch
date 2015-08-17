@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+    <param name="sensorID_1" type="string" value="bottom_optoforce_sensor"/>
+    <param name="sensorID_2" type="string" value="top_optoforce_sensor"/>
+    <!-- <param name="sensorID_3" type="string" value=""/> -->
+    <!-- <param name="sensorID_4" type="string" value=""/> -->
+
+    <param name="k1_xy" type="int" value="495"/>
+    <param name="k2_xy" type="int" value="495"/>
+   <!-- <param name="k3_xy" type="double" value="495"/> -->
+   <!-- <param name="k4_xy" type="double" value="495"/> -->
+
+    <param name="k1_z" type="double" value="-333.86"/>
+    <param name="k2_z" type="double" value="-334.75"/>
+   <!-- <param name="k3_z" type="double" value=""/> -->
+   <!-- <param name="k4_z" type="double" value=""/> -->
+
+    <param name="speed" type="int" value="30"/>
+    <param name="mode" type="int" value="1"/>
+    <param name="filter" type="int" value="150"/>
+
+
+    <node name="optoforce_node" pkg="optoforce_sensor" type="optoforce_node" output="screen"></node>
+
+   <node name="bottom_optoforce_sensor_tf_publisher" pkg="tf" type="static_transform_publisher" args="0.0 0.018 0.0578 0.0 -1.5708 -1.5708 left_arm_bottom_finger_link bottom_optoforce_sensor 10">
+  </node>
+
+   <node name="top_optoforce_sensor_tf_publisher" pkg="tf" type="static_transform_publisher" args="0.0 -0.018 0.0578 0.0 1.5708 1.5708 left_arm_top_finger_link top_optoforce_sensor 20">
+  </node>
+
+</launch>
